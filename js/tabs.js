@@ -1,17 +1,55 @@
 // JavaScript Document
 $(document).ready(function() {
 	
-	$('.slides img:not(:first-child)').hide();
-	
+//	$('.tab-group img:not(:first-child)').hide();
+	var tabToShow;
 	$('.tab-buttons a').on('click', function(ev) {
-		var tabToShow = $(this).attr('href');
+		tabToShow = $(this).attr('href');
 	console.log(tabToShow);	   // will return '#tab-1' when you click on an 'a' button
-		
+		$('.current').removeClass("current");
+		$(tabToShow).addClass('current'); 
+		$(this).addClass('current'); 
 	}); // end of '.tab-buttons a' function
-}); // end of document ready function
+// end of document ready function
 
 
-/*		var next = current + 1;
+function switchTab() {
+	
+	console.log(tabToShow);	   // will return '#tab-1' when you click on an 'a' button
+			
+
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}); 
+/*		
+	$("#next").on("click", function() {
+		var current = $(".slides .current").index();
+
+		var next = current + 1;
 		
 		if (next >= $(".slides img").length) {
 			next = 0;
